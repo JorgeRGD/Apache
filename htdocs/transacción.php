@@ -11,6 +11,7 @@ $connConfig = [
    PDO::ATTR_TIMEOUT => 5,
    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
   ];
+echo 'mysql:host={$dbHost};dbname={$dbName}';
 $dsn = sprintf('mysql:host={$dbHost};dbname={$dbName}', $dbName, $dbHost);
 // Connect to the database
 try {
