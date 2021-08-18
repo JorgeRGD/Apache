@@ -8,15 +8,14 @@ $dbHost = '34.71.209.22';
 
 
 // Connect to the database.
-PDO{
-  $connConfig = [
-        PDO::ATTR_TIMEOUT => 5,
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ];
-  $dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
+$connConfig = [
+   PDO::ATTR_TIMEOUT => 5,
+   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+  ];
+$dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
 // Connect to the database
-  $conn = new PDO($dsn, $username, $password, $connConfig);
-}
+$conn = new PDO($dsn, $username, $password, $connConfig);
+
 // Check connection
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
