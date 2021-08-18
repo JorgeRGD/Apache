@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: php-apache
+    image: php:8.0-apache
+    volumes:
+      - ./php/src:/var/www/html/
+    command: 
+        - bash
+        - -c
+        - >
+          apt-get update;
+          apt-get install git -y;
+          git clone https://github.com/JorgeRGD/htdocs.git;
+    ports:
+      - 8000:80
