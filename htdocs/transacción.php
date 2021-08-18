@@ -13,7 +13,7 @@ $connConfig = [
         PDO::ATTR_TIMEOUT => 5,
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ];
-$conn =  initTcpDatabaseConnection(
+$conn =  DBInitializer::initTcpDatabaseConnection(
         $username,
         $password,
         $dbName,
