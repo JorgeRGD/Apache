@@ -1,6 +1,6 @@
 <?php
 // Config conection
- require_once('DBInitializer.php');
+use PDO;
 $username = 'root';
 $password = '12345678';
 $dbName = 'dcleaner';
@@ -12,12 +12,9 @@ $connConfig = [
         PDO::ATTR_TIMEOUT => 5,
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ];
-$conn =  DBInitializer::initTcpDatabaseConnection(
-        $username,
-        $password,
-        $dbName,
-        $dbHost,
-        $connConfig);
+$dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
+// Connect to the database
+$conn = new PDO($dsn, $username, $password, $connConfig);
 // Check connection
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
