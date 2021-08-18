@@ -6,10 +6,10 @@ $dbName = 'dcleaner';
 $connectionName = 'prueba-de-vpc:us-central1:prueba1';
 $socketDir = '/cloudsql';
 
-$connConfig = [
+$conn_config = [
    PDO::ATTR_TIMEOUT => 5,
    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-  ];  
+  ];
 // Connect to the database.
 $dsn = sprintf(
     'mysql:dbname=%s;unix_socket=%s/%s',
