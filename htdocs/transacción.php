@@ -4,8 +4,7 @@ require __DIR__ . '/DBInitializer.php';
 $username = 'root';
 $password = '12345678';
 $dbName = 'dcleaner';
-$connectionName = getenv("prueba-de-vpc:us-central1:prueba");
-$socketDir = getenv('DB_SOCKET_DIR') ?: '/cloudsql';
+$dbHost = '34.71.209.22';
 
 
 // Connect to the database.
