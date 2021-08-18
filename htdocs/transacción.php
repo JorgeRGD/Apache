@@ -4,21 +4,11 @@ $username = 'root';
 $password = '12345678';
 $dbName = 'dcleaner';
 $dbHost = '34.71.209.22';
-
-
-// Connect to the database.
-$connConfig = [
-   PDO::ATTR_TIMEOUT => 5,
-   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-  ];  
-$dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
-// Connect to the database
-try {
-  $conn = new PDO($dsn, $username, $password, $connConfig);
-  if ($conn) {
-    echo "Connected to the $dbName database successfully!";
-  }
-} catch (PDOException $e) {
-	echo $e->getMessage();
+$instance= '/cloudsql/prueba-de-vpc:us-central1:prueba1'
+$conn = mysqli_connect(null, $username, $password, $dbName, null, $instance);
+if($conn){
+  echo Failed;
+} else{
+  echo Ok;
 }
 ?>
