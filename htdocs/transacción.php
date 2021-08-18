@@ -23,16 +23,3 @@ try {
 }
 
 echo "Connected successfully";
-
-//Retrive Data
-$cantidad = $_POST['cantidad'];
-$pago = $_POST['pago'];
-$ciudad = $_POST['ciudad'];
-$total = $cantidad * 8.56;
-
-$sql = "INSERT INTO transacciones (prod_id, cliente_id, descripcion, cantidad, total, tipo_pago, fecha, ciudad) values
-(1, 1, 'cubrebocas',".$cantidad.",".$total.",'".$pago."','".date('Y-m-d')."', '".$ciudad."')";
-
-$statement = $pdo->prepare($sql);
-$statement->execute();
-?>
