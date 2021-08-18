@@ -4,7 +4,7 @@ $username = 'root';
 $password = '12345678';
 $dbName = 'dcleaner';
 $connectionName = 'prueba-de-vpc:us-central1:prueba1';
-$socketDir = '/cloudsql';
+$socketDir = '34.71.209.22/cloudsql';
 
 $conn_config = [
    PDO::ATTR_TIMEOUT => 5,
