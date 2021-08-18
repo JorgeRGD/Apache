@@ -1,6 +1,5 @@
 <?php
 // Config conection
-use PDO;
 $username = 'root';
 $password = '12345678';
 $dbName = 'dcleaner';
