@@ -15,7 +15,7 @@ $dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
 // Connect to the database
 try {
   $conn = new PDO($dsn, $username, $password, $connConfig);
-  if ($pdo) {
+  if ($conn) {
     echo "Connected to the $db database successfully!";
   }
 } catch (PDOException $e) {
