@@ -1,6 +1,6 @@
 <?php
 // Config conection
- require_once('/DBInitializer.php');
+ require_once('DBInitializer.php');
 $username = 'root';
 $password = '12345678';
 $dbName = 'dcleaner';
