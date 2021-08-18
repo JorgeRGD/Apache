@@ -13,11 +13,13 @@ $connConfig = [
   ];
 $dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
 // Connect to the database
-$conn = new PDO($dsn, $username, $password, $connConfig);
-
-// Check connection
-if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
+try {
+  $conn = new PDO($dsn, $username, $password, $connConfig);
+  if ($pdo) {
+    echo "Connected to the $db database successfully!";
+  }
+} catch (PDOException $e) {
+	echo $e->getMessage();
 }
 
 echo "Connected successfully";
