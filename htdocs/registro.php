@@ -22,7 +22,7 @@ try {
 	echo $e->getMessage();
 }
 
-$email = 'flora@gmail.com';
+$email = 'florqa@gmail.com';
 $sql = "SELECT * FROM clientes WHERE email = :email";
 $statement = $conn->prepare($sql);
 $statement->bindParam(':email', $email, PDO::PARAM_INT);
