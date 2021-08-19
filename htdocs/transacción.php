@@ -10,13 +10,12 @@ $dbHost = '34.134.50.99';
 $connConfig = [
    PDO::ATTR_TIMEOUT => 5,
    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-  ];  
+  ];
 $dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
 // Connect to the database
 try {
   $conn = new PDO($dsn, $username, $password, $connConfig);
   if ($conn) {
-    echo "Connected to the $dbName database successfully!";
   }
 } catch (PDOException $e) {
 	echo $e->getMessage();
@@ -25,10 +24,9 @@ try {
 $cantidad = $_POST['cantidad'];
 $pago = $_POST['pago'];
 $ciudad = $_POST['ciudad'];
-$total = $cantidad * 8.56;
-$sql = "INSERT INTO transacciones (prod_id, cliente_id, descripcion, cantidad, total, tipo_pago, fecha, ciudad) values
-(1, 1, 'cubrebocas',".$cantidad.",".$total.",'".$pago."','".date('Y-m-d')."', '".$ciudad."')";
+$sql = "INSERT INTO transacciones (producto_id, cliente_id, cantidad, total, tipo_pago, fecha, status) VALUES (:producto_id, :cliente_id, :cantidad, :total, :tipo de pago, :fecha :ciudad, :estatus)";
 $statement = $conn->prepare($sql);
-$statement->execute(); 
+
+$statement->execute();
 
 ?>

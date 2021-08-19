@@ -41,12 +41,12 @@
       <!--/.navbar-header-->
       <div id="main-nav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="mainNav">
-          <li class="active" id="firstLink"><a href="index.html" class="scroll-link">Inicio</a></li>
-          <li><a href="index.html" class="scroll-link">Productos</a></li>
-          <li><a href="index.html" class="scroll-link">Conócenos</a></li>
-          <li><a href="index.html" class="scroll-link">Eventos</a></li>
-          <li><a href="index.html" class="scroll-link">Promociones</a></li>
-          <li><a href="index.html" class="scroll-link">Contacto</a></li>
+          <li class="active" id="firstLink"><a href="index.php" class="scroll-link">Inicio</a></li>
+          <li><a href="index.php" class="scroll-link">Productos</a></li>
+          <li><a href="index.php" class="scroll-link">Conócenos</a></li>
+          <li><a href="index.php" class="scroll-link">Eventos</a></li>
+          <li><a href="index.php" class="scroll-link">Promociones</a></li>
+          <li><a href="index.php" class="scroll-link">Contacto</a></li>
         </ul>
       </div>
       <!--/.navbar-collapse-->
@@ -73,11 +73,11 @@
             <div><h2>Inicio de sesión</h2></div>
             <div class="form-group">
 	      <label for="correo">Correo</label>
-              <input type="text" class="form-control" name="correo" placeholder="Correo electrónico" title="Ingrese su correo electrónico" required>
+              <input type="text" class="form-control" name="correo" placeholder="Correo electrónico" maxlength="100" title="Ingrese su correo electrónico" required>
             </div>
 	    <div class="form-group">
 	      <label for="contrasena">Contraseña</label>
-              <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" title="Ingrese su contraseña" required>
+              <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" minlength="8" maxlength="30" title="Ingrese su contraseña" required>
             </div>
             <div class="form-group">
               <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Ingresar</button>
