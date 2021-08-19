@@ -83,7 +83,7 @@
           </div>
     <div class="form-group">
             <label for="contraseña">Contraseña</label>
-            <input id = 'contraseña' type="password" class="form-control" name="contrasena" placeholder="Contraseña" title="Escriba una contraseña" required>
+            <input id = 'contraseña' type="password" class="form-control" name="contraseña" placeholder="Contraseña" title="Escriba una contraseña" required>
           </div>
     <div class="form-group">
             <label for="direccion">Dirección</label>
