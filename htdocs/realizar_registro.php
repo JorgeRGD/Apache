@@ -27,7 +27,6 @@ $passwd = $_POST['contraseña'];
 $direccion = $_POST['direccion'];
 $codigo_postal = $_POST['zipcode'];
 $ciudad = $_POST['ciudad'];
-echo $email;
 $sql = "SELECT * FROM clientes WHERE email like :email";
 $statement = $conn->prepare($sql);
 $statement->bindParam(':email', $email, PDO::PARAM_STR);
