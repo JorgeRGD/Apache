@@ -55,6 +55,7 @@
             echo '<li class="plan-action"><a href="index.php">Salir</a></li>';
           }else{
             header("Location: index.php");
+            exit();
           }
           ?>
         </ul>
