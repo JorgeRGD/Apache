@@ -29,7 +29,7 @@ $statement->execute(array(
   ':email' => $email,
   ':passwd' => $passwd,
 ));
-$cliente = $statement->fetch(PDO::FETCH_ASSOC)
+$cliente = $statement->fetch(PDO::FETCH_ASSOC);
 if ($cliente) {
 	echo "Usuario o contraseña incorrectos";
 } else {
