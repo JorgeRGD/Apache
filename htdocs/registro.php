@@ -23,7 +23,7 @@ try {
 }
 
 $email = 'flora@gmail.com';
-$sql = "SELECT * FROM clientes WHERE email '".$email."'";
+$sql = "SELECT * FROM clientes WHERE email ='".$email."'";
 echo $sql;
 $statement = $conn->prepare($sql);
 $statement->execute();
