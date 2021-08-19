@@ -21,12 +21,36 @@ try {
 	echo $e->getMessage();
 }
 
+$usuario = $_GET['usuario'];
+$producto = $_POST['producto'];
 $cantidad = $_POST['cantidad'];
 $pago = $_POST['pago'];
-$ciudad = $_POST['ciudad'];
-$sql = "INSERT INTO transacciones (producto_id, cliente_id, cantidad, total, tipo_pago, fecha, status) VALUES (:producto_id, :cliente_id, :cantidad, :total, :tipo de pago, :fecha :ciudad, :estatus)";
-$statement = $conn->prepare($sql);
 
+$sql = "SELECT * FROM productos WHERE nombre like :producto";
+$statement = $conn->prepare($sql);
+$statement->bindParam(':producto', $producto, PDO::PARAM_STR);
 $statement->execute();
+$prod = $statement->fetch(PDO::FETCH_ASSOC);
+$producto_id = $prod['id'];
+
+$sql = "SELECT * FROM clientes WHERE nombre like :usuario";
+$statement = $conn->prepare($sql);
+$statement->bindParam(':usuario', $usuario, PDO::PARAM_STR);
+$statement->execute();
+$cliente = $statement->fetch(PDO::FETCH_ASSOC);
+$cliente_id = $cliente['id'];
+
+$fecha = date('Y-m-d');
+
+
+$sql = "INSERT INTO transacciones (producto_id, cliente_id, cantidad, total, tipo_pago, fecha, status) VALUES (:producto_id, :cliente_id, :cantidad, 0, :tipo de pago, :fecha, 'En proceso')";
+$statement = $conn->prepare($sql);
+$statement->execute(array(
+  ':producto_id' => $producto_id,
+  ':cliente_id' => $cliente_id,
+  ':cantidad' => $cantidad,
+  ':tipo_pago' => $pago,
+  ':fecha' => $fecha
+));
 
 ?>

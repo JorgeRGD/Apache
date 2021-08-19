@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="row mrgn30">
-        <form method="post" action="transacción.php" id="contactfrm" role="form">
+        <?php echo '<form method="post" action="transacción.php?usuario="'.$usuario.' id="contactfrm" role="form">'?>
           <div class="col-sm-12">
             <div class="form-group">
               <label for="producto">Elija un producto </label>
