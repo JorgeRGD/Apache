@@ -340,7 +340,7 @@ if ($cliente) {
         <div class="row mrgn30">
           <form method="post" action="login_check.php" id="contactfrm" role="form">
             <div class="col-sm-12">
-              <div><h2>Registro éxitoso, inicie sesion</h2>
+              <div><h2>Registro éxitoso, inicie sesión</h2>
               <h2>Inicio de sesión</h2></div>
               <div class="form-group">
   	      <label for="correo">Correo</label>
