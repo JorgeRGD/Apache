@@ -35,7 +35,7 @@ $statement->execute();
 $cliente = $statement->fetch(PDO::FETCH_ASSOC);
 
 if ($cliente) {
-	echo "Ya existe el usuario"
+	echo "Ya existe el usuario";
 } else {
   $sql = "INSERT INTO clientes (nombre, email, passwd, codigo_postal, direccion, ciudad) VALUES (:nombre, :email, :passwd, :codigo_postal, :direccion, :ciudad)";
   $statement = $conn->prepare($sql);
