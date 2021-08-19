@@ -334,14 +334,14 @@ if ($cliente) {
         <div class="row">
           <div class="heading text-center">
             <!-- Heading -->
-            <h2>Registro éxitoso, inicie sesion</h2>
             <h2>Iniciar sesión</h2>
           </div>
         </div>
         <div class="row mrgn30">
           <form method="post" action="login_check.php" id="contactfrm" role="form">
             <div class="col-sm-12">
-              <div><h2>Inicio de sesión</h2></div>
+              <div><h2>Registro éxitoso, inicie sesion</h2>
+              <h2>Inicio de sesión</h2></div>
               <div class="form-group">
   	      <label for="correo">Correo</label>
                 <input type="text" class="form-control" name="correo" placeholder="Correo electrónico" maxlength="100" title="Ingrese su correo electrónico" required>
