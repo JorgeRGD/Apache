@@ -27,5 +27,5 @@ $sql = "SELECT * FROM clientes WHERE email ='".$email."'";
 $statement = $conn->prepare($sql);
 $statement->execute();
 $user = $statement->fetchAll(PDO::FETCH_ASSOC);
-echo $user;
+echo $user['nombre'];
 ?>
