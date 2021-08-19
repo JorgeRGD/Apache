@@ -263,7 +263,14 @@
         <li> <strong>2</strong> elásticos </li>
         <li> <strong>1 año </strong> de garantía </li>
         <li> <strong>Certificado</strong> internacional</li>
-  <li class="plan-action"> <a href="login.php?producto=KN-95" class="btn btn-danger btn-lg">Comprar</a> </li>
+        <?php
+        if($usuario){
+          echo '<li class="plan-action"> <a href="compra.php?usuario='.$usuario.'" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        else{
+          echo '<li class="plan-action"> <a href="login.php" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        ?>
       </ul>
     </div>
     <div class="col-lg-3 col-md-3 col-xs-12">
@@ -275,7 +282,14 @@
         <li> <strong>24 horas</strong> de protección </li>
         <li> <strong>1 año </strong> de garantía </li>
         <li> <strong>Certificado</strong> internacional</li>
-        <li class="plan-action"> <a href="login.php?producto=Desinfectante" class="btn btn-danger btn-lg">Comprar</a> </li>
+        <?php
+        if($usuario){
+          echo '<li class="plan-action"> <a href="compra.php?usuario='.$usuario.'" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        else{
+          echo '<li class="plan-action"> <a href="login.php" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        ?>
       </ul>
     </div>
     <div class="col-lg-3 col-md-3 col-xs-12">
@@ -286,8 +300,14 @@
         <li> <strong>10x20</strong> cm </li>
         <li> <strong>24 horas</strong> de protección </li>
         <li> <strong>Desechables </strong> biodegradables </li>
-        <li> <strong>Certificado</strong> internacional</li>
-        <li class="plan-action"> <a href="login.php?producto=Toallas" class="btn btn-danger btn-lg">Comprar</a> </li>
+        <li> <strong>Certificado</strong> internacional</li><?php
+        if($usuario){
+          echo '<li class="plan-action"> <a href="compra.php?usuario='.$usuario.'" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        else{
+          echo '<li class="plan-action"> <a href="login.php" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        ?>
       </ul>
     </div>
   </div>
