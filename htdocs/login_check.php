@@ -423,8 +423,7 @@ if ($cliente) {
   <script src="js/custom.js" type="text/javascript"></script>
   <script src="js/owl-carousel/owl.carousel.js"></script>
   </body>
-  </html>
-'
+  </html>';
 } else {
   echo '<!doctype html>
   <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
