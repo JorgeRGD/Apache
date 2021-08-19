@@ -51,7 +51,7 @@
           <li><a href="index.php?usuario='.$usuario.'" class="scroll-link">Promociones</a></li>
           <li><a href="index.php?usuario='.$usuario.'" class="scroll-link">Contacto</a></li>
           <li class="plan-action"><a href=#>'.$usuario.'</a></li>
-          <li class="plan-action"><a href="index.php">Salir</a></li>';
+          <li class="plan-action"><a href="index.php?usuario='.$usuario.'">Salir</a></li>';
           ?>
         </ul>
       </div>
