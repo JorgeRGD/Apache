@@ -22,7 +22,7 @@ try {
 	echo $e->getMessage();
 }
 
-$email = 'florqa@gmail.com';
+$email = 'flora@gmail.com';
 echo $email;
 $sql = "SELECT * FROM clientes WHERE email like :email";
 $statement = $conn->prepare($sql);
