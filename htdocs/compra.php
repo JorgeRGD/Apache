@@ -41,13 +41,12 @@
       <!--/.navbar-header-->
       <div id="main-nav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="mainNav">
-          <li class="active" id="firstLink"><a href="#home" class="scroll-link">Inicio</a></li>
-          <li><a href="#services" class="scroll-link">Productos</a></li>
-          <li><a href="#aboutUs" class="scroll-link">Conócenos</a></li>
-          <li><a href="#work" class="scroll-link">Eventos</a></li>
-          <li><a href="#plans" class="scroll-link">Promociones</a></li>
-          <li><a href="#contactUs" class="scroll-link">Contacto</a></li>
-          <li><a href="#carrito" class="scroll-link">Carrito</a></li>
+          <li class="active" id="firstLink"><a href="index.php" class="scroll-link">Inicio</a></li>
+          <li><a href="index.php" class="scroll-link">Productos</a></li>
+          <li><a href="index.php" class="scroll-link">Conócenos</a></li>
+          <li><a href="index.php" class="scroll-link">Eventos</a></li>
+          <li><a href="index.php" class="scroll-link">Promociones</a></li>
+          <li><a href="index.php" class="scroll-link">Contacto</a></li>
         </ul>
       </div>
       <!--/.navbar-collapse-->
@@ -65,18 +64,80 @@
       <div class="row">
         <div class="heading text-center">
           <!-- Heading -->
-          <h2>Contáctanos</h2>
+          <h2></h2>
         </div>
       </div>
       <div class="row mrgn30">
         <form method="post" action="transacción.php" id="contactfrm" role="form">
           <div class="col-sm-12">
             <div class="form-group">
-              <label for="producto">Producto: <?php echo $_GET["producto"] ?> </label>
+              <label for="producto">Elija un producto </label>
+	      <select id="producto" name="producto">
+                    <option value="Mascarilla KN95">Mascarilla KN95</option>
+		    <option value="Gel Antibacterial Escudo Sobre">Gel Antibacterial Escudo Sobre</option>
+		    <option value="Spray Desinfectante">Spray Desinfectante</option>
+		    <option value="Best Trading Cubrebocas">Best Trading Cubrebocas</option>
+		    <option value="Careta Protectora PVC">Careta Protectora PVC</option>
+	      </select>
+
             </div>
             <div class="form-group">
-              <label for="email">Cantidad</label>
-              <input type="int" class="form-control" name="cantidad" id="cantidad" placeholder="Escriba la cantidad" title="Ingrese la cantidad númerica">
+              <label for="cantidad">Cantidad</label>
+              <input type="int" class="form-control" name="cantidad" id="cantidad" placeholder="Escriba la cantidad" maxlength="7" title="Ingrese la cantidad númerica" required>
+            </div>
+	    <div class="form-group">
+              <label for="cliente">Nombre</label>
+              <input type="text" class="form-control" name="cliente" placeholder="Nombre del cliente" maxlength="100" title="Ingrese el nombre del cliente" required>
+            </div>
+	    <div class="form-group">
+              <label for="correo">Correo</label>
+              <input type="text" class="form-control" name="correo" placeholder="Correo electrónico" maxlength="100" title="Ingrese su correo electrónico" required>
+            </div>
+	    <div class="form-group">
+              <label for="direccion">Dirección</label>
+              <input type="text" class="form-control" name="direccion" placeholder="Domicilio" maxlength="105" title="Ingrese su dirección" required>
+            </div>
+	    <div class="form-group">
+              <label for="zipcode">Código Postal</label>
+              <input type="text" class="form-control" name="zipcode" placeholder="Código Postal" maxlength="5" title="Ingrese su código postal" required>
+            </div>
+	    <div class="form-group">
+                <label for="ciudad">Elija la ciudad:</label>
+                <select id="ciudad" name="ciudad">
+		  <option value="no">Seleccione una...</option>
+                  <option value="Aguascalientes">Aguascalientes</option>
+      <option value="Baja California">Baja California</option>
+      <option value="Baja California Sur">Baja California Sur</option>
+      <option value="Campeche">Campeche</option>
+      <option value="Chiapas">Chiapas</option>
+      <option value="Chihuahua">Chihuahua</option>
+      <option value="CDMX">Ciudad de México</option>
+      <option value="Coahuila">Coahuila</option>
+      <option value="Colima">Colima</option>
+      <option value="Durango">Durango</option>
+      <option value="Estado de México">Estado de México</option>
+      <option value="Guanajuato">Guanajuato</option>
+      <option value="Guerrero">Guerrero</option>
+      <option value="Hidalgo">Hidalgo</option>
+      <option value="Jalisco">Jalisco</option>
+      <option value="Michoacán">Michoacán</option>
+      <option value="Morelos">Morelos</option>
+      <option value="Nayarit">Nayarit</option>
+      <option value="Nuevo León">Nuevo León</option>
+      <option value="Oaxaca">Oaxaca</option>
+      <option value="Puebla">Puebla</option>
+      <option value="Querétaro">Querétaro</option>
+      <option value="Quintana Roo">Quintana Roo</option>
+      <option value="San Luis Potosí">San Luis Potosí</option>
+      <option value="Sinaloa">Sinaloa</option>
+      <option value="Sonora">Sonora</option>
+      <option value="Tabasco">Tabasco</option>
+      <option value="Tamaulipas">Tamaulipas</option>
+      <option value="Tlaxcala">Tlaxcala</option>
+      <option value="Veracruz">Veracruz</option>
+      <option value="Yucatán">Yucatán</option>
+      <option value="Zacatecas">Zacatecas</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="pago">Elija la opción de pago:</label>
@@ -84,14 +145,6 @@
                   <option value="transferencia">Transferencia</option>
                   <option value="Paypal">Paypal</option>
                   <option value="Skrill">Skril</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="ciudad">Elija la ciudad:</label>
-                <select id="ciudad" name="ciudad">
-                  <option value="Huasco">Huasco</option>
-                  <option value="Mérida">Mérida</option>
-                  <option value="Zapopan">Zapopan</option>
                 </select>
             </div>
             <div class="form-group">
@@ -118,7 +171,6 @@
                     </ul>
                  </div>
             </div>
-
             <div class="col-md-3">
             	<div class="col">
                     <h4>Suscripción</h4>
@@ -133,7 +185,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="col-md-3">
             	<div class="col col-social-icons">
                     <h4>Síguenos</h4>
@@ -147,21 +198,18 @@
                     <a href="#"><i class="fa fa-pinterest"></i></a>
                 </div>
             </div>
-
              <div class="col-md-3">
              	<div class="col">
                     <h4>Noticias</h4>
                     <p>
-                    Enterese sobre los acontecimientos de DCLeaner.
+                    Enterese sobre los acontecimientos de DCleaner.
                     <br><br>
                     <a href="#" class="btn">Entérate!</a>
                     </p>
                 </div>
             </div>
         </div>
-
     </div>
-
 </footer>
 <!--/.page-section-->
 <section class="copyright">
@@ -173,7 +221,6 @@
   </div>
 </section>
 <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
-
 <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
 <script src="js/modernizr-latest.js"></script>
 <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
