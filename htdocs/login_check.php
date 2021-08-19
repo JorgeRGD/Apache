@@ -104,7 +104,7 @@ if ($cliente) {
           </div>
         </div>
         <div class="row mrgn30">
-        <h1>Usuario o contraseña incorrectos
+        <h1>Usuario o contraseña incorrectos</h1>
           <form method="post" action="login_check.php" id="contactfrm" role="form">
             <div class="col-sm-12">
               <div><h2>Inicio de sesión</h2></div>
