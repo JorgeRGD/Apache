@@ -89,7 +89,7 @@
         $username = 'root';
         $password = '12345678';
         $dbName = 'dcleaner';
-        $dbHost = '34.134.50.99';
+        $dbHost = '34.71.209.22';
 
 
         // Connect to the database.
