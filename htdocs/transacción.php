@@ -21,6 +21,13 @@ try {
 	echo $e->getMessage();
 }
 
+$usuario = $_GET['usuario'];
+$producto = $_POST['producto'];
+$cantidad = $_POST['cantidad'];
+$total = 0;
+$pago = $_POST['pago'];$fecha = date('Y-m-d');
+$fecha = date('Y-m-d');
+$estatus = 'En proceso';
 
 
 $sql = "SELECT * FROM productos WHERE nombre like :producto";
@@ -40,15 +47,6 @@ $cliente = $statement->fetch(PDO::FETCH_ASSOC);
 if($cliente){
   $cliente_id = $cliente['id'];
 }
-
-$usuario = $_GET['usuario'];
-$producto = $_POST['producto'];
-$cantidad = $_POST['cantidad'];
-$total = 0;
-$pago = $_POST['pago'];$fecha = date('Y-m-d');
-$fecha = date('Y-m-d');
-$estatus = 'En proceso';
-
 
 
 
