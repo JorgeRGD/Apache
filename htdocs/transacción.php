@@ -25,7 +25,8 @@ $usuario = $_GET['usuario'];
 $producto = $_POST['producto'];
 $cantidad = $_POST['cantidad'];
 $pago = $_POST['pago'];
-
+echo $producto;
+echo $usuario;
 $sql = "SELECT * FROM productos WHERE nombre like :producto";
 $statement = $conn->prepare($sql);
 $statement->bindParam(':producto', $producto, PDO::PARAM_STR);
