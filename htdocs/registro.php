@@ -75,7 +75,7 @@
           <div><h2>Registro DCleaner</h2></div>
     <div class="form-group">
             <label for="cliente">Nombre</label>
-            <input id = 'nombre' type="text" class="form-control" name="cliente" placeholder="Nombre del cliente" title="Escriba su nombre" required>
+            <input id = 'nombre' type="text" class="form-control" name="nombre" placeholder="Nombre del cliente" title="Escriba su nombre" required>
           </div>
     <div class="form-group">
             <label for="correo">Correo</label>
