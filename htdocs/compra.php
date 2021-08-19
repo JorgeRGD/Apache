@@ -47,6 +47,17 @@
           <li><a href="index.php" class="scroll-link">Eventos</a></li>
           <li><a href="index.php" class="scroll-link">Promociones</a></li>
           <li><a href="index.php" class="scroll-link">Contacto</a></li>
+          <?php
+          error_reporting(0);
+          $usuario = $_GET['usuario'];
+          if($usuario){
+            echo '<li class="plan-action"><a href=#>'.$usuario.'</a></li>';
+            echo '<li class="plan-action"><a href="index.php">Salir</a></li>';
+          }else{
+            header("Location: index.php");
+            die();
+          }
+          ?>
         </ul>
       </div>
       <!--/.navbar-collapse-->
