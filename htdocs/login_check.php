@@ -24,7 +24,6 @@ try {
 $email = $_POST['correo'];
 $passwd = $_POST['contraseña'];
 $sql = "SELECT * FROM clientes WHERE email like :email AND passwd like :passwd";
-echo $sql;
 $statement = $conn->prepare($sql);
 $statement->execute(array(
   ':email' => $email,
@@ -32,9 +31,8 @@ $statement->execute(array(
 ));
 $cliente = $statement->fetch(PDO::FETCH_ASSOC);
 if ($cliente) {
-	echo "Usuario o contraseña incorrectos";
-} else {
-
   echo 'Accediste';
+} else {
+  echo 'Usuario o contraseña incorrecto';
 }
 ?>
