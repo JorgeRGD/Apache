@@ -55,6 +55,7 @@
           echo '<li class="plan-action"><a href=#>'.$usuario.'</a></li>';
         }else{
           echo '<li class="plan-action"><a href="login.php" class="scroll-link">Iniciar sesión</a></li>';
+        }
         ?>
       </ul>
     </div>
