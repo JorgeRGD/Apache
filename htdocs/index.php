@@ -243,7 +243,14 @@
         <li> <strong>2</strong> elásticos </li>
         <li> <strong>3 meses </strong> de garantía </li>
         <li> <strong>Certificado</strong> internacional</li>
-        <li class="plan-action"> <a href="login.php?producto=Cubrebocas" class="btn btn-danger btn-lg">Comprar</a> </li>
+        <?php
+        if($usuario){
+          echo '<li class="plan-action"> <a href="compra.php?usuario'.$usuario.'" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        else{
+          echo '<li class="plan-action"> <a href="login.php" class="btn btn-danger btn-lg">Comprar</a> </li>';
+        }
+        ?>
       </ul>
     </div>
     <div class="col-lg-3 col-md-3 col-xs-12">
