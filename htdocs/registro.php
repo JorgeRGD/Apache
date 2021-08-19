@@ -30,7 +30,7 @@ $statement->execute();
 $cliente = $statement->fetch(PDO::FETCH_ASSOC);
 
 if ($cliente) {
-	echo $publisher['nombre'];
+	echo $cliente['nombre'];
 } else {
 	echo "No existe el correo";
 }
