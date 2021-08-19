@@ -245,7 +245,7 @@
         <li> <strong>Certificado</strong> internacional</li>
         <?php
         if($usuario){
-          echo '<li class="plan-action"> <a href="compra.php?usuario'.$usuario.'" class="btn btn-danger btn-lg">Comprar</a> </li>';
+          echo '<li class="plan-action"> <a href="compra.php?usuario='.$usuario.'" class="btn btn-danger btn-lg">Comprar</a> </li>';
         }
         else{
           echo '<li class="plan-action"> <a href="login.php" class="btn btn-danger btn-lg">Comprar</a> </li>';
