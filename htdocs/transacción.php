@@ -50,7 +50,7 @@ if($cliente){
 
 
 
-$sql = "INSERT INTO transacciones (producto_id, cliente_id, cantidad, total, tipo_pago, fecha, status) VALUES (:producto_id, :cliente_id, :cantidad, :total, :tipo de pago, :fecha, :estatus)";
+$sql = "INSERT INTO transacciones (producto_id, cliente_id, cantidad, total, tipo_pago, fecha, status) VALUES (:producto_id, :cliente_id, :cantidad, :total, :tipo_pago, :fecha, :estatus)";
 $statement = $conn->prepare($sql);
 $statement->execute(array(
   ':producto_id' => $producto_id,
