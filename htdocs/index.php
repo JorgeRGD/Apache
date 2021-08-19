@@ -49,11 +49,12 @@
         <li><a href="#plans" class="scroll-link">Promociones</a></li>
         <li><a href="#contactUs" class="scroll-link">Contacto</a></li>
         <?php
-
-        $usuario = $_GET['usuario'];
-        if($usuario){
-          echo '<li class="plan-action"><a href=#>'.$usuario.'</a></li>';
-        }else{
+        try{
+          $usuario = $_GET['usuario'];
+          if($usuario){
+            echo '<li class="plan-action"><a href=#>'.$usuario.'</a></li>';
+          }
+        }catch{
           echo '<li class="plan-action"><a href="login.php" class="scroll-link">Iniciar sesión</a></li>';
         }
         ?>
