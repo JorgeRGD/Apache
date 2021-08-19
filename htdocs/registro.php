@@ -23,9 +23,15 @@ try {
 }
 
 $email = 'flora@gmail.com';
-$sql = "SELECT * FROM clientes WHERE email ='".$email."'";
+$sql = "SELECT * FROM clientes WHERE email = :email";
 $statement = $conn->prepare($sql);
+$statement->bindParam(':email', $email, PDO::PARAM_INT);
 $statement->execute();
-$user = $statement->fetchAll(PDO::FETCH_ASSOC);
-echo $user['nombre'];
+$cliente = $statement->fetch(PDO::FETCH_ASSOC);
+
+if ($cliente) {
+	echo $publisher['nombre'];
+} else {
+	echo "No existe el correo";
+}
 ?>
