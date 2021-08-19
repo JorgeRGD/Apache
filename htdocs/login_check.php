@@ -26,8 +26,8 @@ $passwd = $_POST['contraseña'];
 $sql = "SELECT * FROM clientes WHERE email like :email AND passwd like :passwd";
 $statement = $conn->prepare($sql);
 $statement->execute(array(
-  ':nombre' => $nombre,
   ':email' => $email,
+  ':passwd' => $passwd,
 ));
 
 if ($cliente) {
