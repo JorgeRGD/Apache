@@ -48,7 +48,14 @@
         <li><a href="#work" class="scroll-link">Eventos</a></li>
         <li><a href="#plans" class="scroll-link">Promociones</a></li>
         <li><a href="#contactUs" class="scroll-link">Contacto</a></li>
-  <li class="plan-action"><a href="login.php" class="scroll-link">Iniciar sesión</a></li>
+        <?php
+        $usuario = $_GET['usuario'];
+        if($usuario){
+          echo '<li class="plan-action">'.$usuario.'</li>';
+        }else{
+          echo '<li class="plan-action"><a href="login.php" class="scroll-link">Iniciar sesión</a></li>'
+        }
+        ?>
       </ul>
     </div>
     <!--/.navbar-collapse-->
