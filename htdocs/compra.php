@@ -54,7 +54,7 @@
             echo '<li class="plan-action"><a href=#>'.$usuario.'</a></li>';
             echo '<li class="plan-action"><a href="index.php">Salir</a></li>';
           }else{
-            header("Location: index.php");
+            header("Location: http://35.208.29.147/");
             exit();
           }
           ?>
