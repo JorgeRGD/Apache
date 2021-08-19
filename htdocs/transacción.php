@@ -31,14 +31,18 @@ $statement = $conn->prepare($sql);
 $statement->bindParam(':producto', $producto, PDO::PARAM_STR);
 $statement->execute();
 $prod = $statement->fetch(PDO::FETCH_ASSOC);
-$producto_id = $prod['id'];
+if ($prod) {
+  $producto_id = $prod['id'];
+}
 
 $sql = "SELECT * FROM clientes WHERE nombre like :usuario";
 $statement = $conn->prepare($sql);
 $statement->bindParam(':usuario', $usuario, PDO::PARAM_STR);
 $statement->execute();
 $cliente = $statement->fetch(PDO::FETCH_ASSOC);
-$cliente_id = $cliente['id'];
+if($cliente){
+  $cliente_id = $cliente['id'];
+}
 
 $fecha = date('Y-m-d');
 
