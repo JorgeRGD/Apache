@@ -26,7 +26,7 @@ $email = 'flora@gmail.com';
 echo $email;
 $sql = "SELECT * FROM clientes WHERE email like :email";
 $statement = $conn->prepare($sql);
-$statement->bindParam(':email', $email, PDO::PARAM_INT);
+$statement->bindParam(':email', $email, PDO::PARAM_STR);
 $statement->execute();
 $cliente = $statement->fetch(PDO::FETCH_ASSOC);
 
