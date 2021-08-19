@@ -21,12 +21,8 @@ try {
 	echo $e->getMessage();
 }
 
-$usuario = $_GET['usuario'];
-$producto = $_POST['producto'];
-$cantidad = $_POST['cantidad'];
-$pago = $_POST['pago'];
-echo $producto;
-echo $usuario;
+
+
 $sql = "SELECT * FROM productos WHERE nombre like :producto";
 $statement = $conn->prepare($sql);
 $statement->bindParam(':producto', $producto, PDO::PARAM_STR);
@@ -45,17 +41,27 @@ if($cliente){
   $cliente_id = $cliente['id'];
 }
 
+$usuario = $_GET['usuario'];
+$producto = $_POST['producto'];
+$cantidad = $_POST['cantidad'];
+$total = 0;
+$pago = $_POST['pago'];$fecha = date('Y-m-d');
 $fecha = date('Y-m-d');
+$estatus = 'En proceso';
 
 
-$sql = "INSERT INTO transacciones (producto_id, cliente_id, cantidad, total, tipo_pago, fecha, status) VALUES (:producto_id, :cliente_id, :cantidad, 0, :tipo de pago, :fecha, 'En proceso')";
+
+
+$sql = "INSERT INTO transacciones (producto_id, cliente_id, cantidad, total, tipo_pago, fecha, status) VALUES (:producto_id, :cliente_id, :cantidad, :total, :tipo de pago, :fecha, :estatus)";
 $statement = $conn->prepare($sql);
 $statement->execute(array(
   ':producto_id' => $producto_id,
   ':cliente_id' => $cliente_id,
   ':cantidad' => $cantidad,
+  ':total' => $total,
   ':tipo_pago' => $pago,
-  ':fecha' => $fecha
+  ':fecha' => $fecha,
+  ':estatus' => $estatus
 ));
 
 ?>
