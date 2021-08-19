@@ -33,6 +33,8 @@ $statement->execute(array(
 $cliente = $statement->fetch(PDO::FETCH_ASSOC);
 if ($cliente) {
   echo 'Accediste'.$cliente['nombre'];
+  header("Location: index.php?usuario=".$cliente['nombre']);
+  exit();
 } else {
   echo '<!doctype html>
   <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
