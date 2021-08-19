@@ -31,7 +31,7 @@ $statement->execute(array(
 ));
 $cliente = $statement->fetch(PDO::FETCH_ASSOC);
 if ($cliente) {
-  echo 'Accediste';
+  echo 'Accediste'.$cliente['nombre'];
 } else {
   echo 'Usuario o contraseña incorrecto';
 }
