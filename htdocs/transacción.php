@@ -3,7 +3,7 @@
 $username = 'root';
 $password = '12345678';
 $dbName = 'dcleaner';
-$dbHost = '34.71.209.22';
+$dbHost = '35.238.96.185';
 
 
 // Connect to the database.
