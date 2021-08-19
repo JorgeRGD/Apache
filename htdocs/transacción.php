@@ -25,7 +25,7 @@ $usuario = $_GET['usuario'];
 $producto = $_POST['producto'];
 $cantidad = $_POST['cantidad'];
 $total = 0;
-$pago = $_POST['pago'];$fecha = date('Y-m-d');
+$tipo_pago = $_POST['pago'];
 $fecha = date('Y-m-d');
 $estatus = 'En proceso';
 
@@ -57,9 +57,9 @@ $statement->execute(array(
   ':cliente_id' => $cliente_id,
   ':cantidad' => $cantidad,
   ':total' => $total,
-  ':tipo_pago' => $pago,
+  ':tipo_pago' => $tipo_pago,
   ':fecha' => $fecha,
-  ':estatus' => $estatus
+  ':estatus' => $estatus,
 ));
 
 ?>
