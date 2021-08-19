@@ -45,7 +45,7 @@
           error_reporting(0);
           $usuario = $_GET['usuario'];
           echo '<li class="active" id="firstLink"><a href="index.php#home?usuario='.$usuario.'" class="scroll-link">Inicio</a></li>
-          <li><a href="index.php" class="scroll-link">Productos</a></li>
+          <li><a href="index.php#services?usuario='.$usuario.'" class="scroll-link">Productos</a></li>
           <li><a href="index.php" class="scroll-link">Conócenos</a></li>
           <li><a href="index.php" class="scroll-link">Eventos</a></li>
           <li><a href="index.php" class="scroll-link">Promociones</a></li>
