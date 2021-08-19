@@ -24,7 +24,7 @@ try {
 
 $email = 'florqa@gmail.com';
 echo $email;
-$sql = "SELECT * FROM clientes WHERE email = :email";
+$sql = "SELECT * FROM clientes WHERE email like :email";
 $statement = $conn->prepare($sql);
 $statement->bindParam(':email', $email, PDO::PARAM_INT);
 $statement->execute();
