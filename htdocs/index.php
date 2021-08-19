@@ -53,7 +53,7 @@
         if($usuario){
           echo '<li class="plan-action">'.$usuario.'</li>';
         }else{
-          echo '<li class="plan-action"><a href="login.php" class="scroll-link">Iniciar sesión</a></li>'
+          echo '<li class="plan-action"><a href="login.php" class="scroll-link">Iniciar sesión</a></li>';
         }
         ?>
       </ul>
