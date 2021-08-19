@@ -79,16 +79,39 @@
         </div>
       </div>
       <div class="row mrgn30">
-        <?php echo '<form method="post" action="transacción.php?usuario="'.$usuario.' id="contactfrm" role="form">'?>
+        <?php echo '<form method="post" action="transacción.php?usuario='.$usuario.'" id="contactfrm" role="form">'?>
           <div class="col-sm-12">
             <div class="form-group">
               <label for="producto">Elija un producto </label>
 	      <select id="producto" name="producto">
-                    <option value="Mascarilla KN95">Mascarilla KN95</option>
-		    <option value="Gel Antibacterial Escudo Sobre">Gel Antibacterial Escudo Sobre</option>
-		    <option value="Spray Desinfectante">Spray Desinfectante</option>
-		    <option value="Best Trading Cubrebocas">Best Trading Cubrebocas</option>
-		    <option value="Careta Protectora PVC">Careta Protectora PVC</option>
+        <?php
+        // Config conection
+        $username = 'root';
+        $password = '12345678';
+        $dbName = 'dcleaner';
+        $dbHost = '34.134.50.99';
+
+
+        // Connect to the database.
+        $connConfig = [
+           PDO::ATTR_TIMEOUT => 5,
+           PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+          ];
+        $dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
+        // Connect to the database
+        try {
+          $conn = new PDO($dsn, $username, $password, $connConfig);
+          if ($conn) {
+          }
+        } catch (PDOException $e) {
+        	echo $e->getMessage();
+        }
+
+        $statement = $conn->query("SELECT * FROM productos");
+        while ($row = $statement->fetch()) {
+          echo '<option value="'.$row['nombre'].'">'.$row['nombre'].'</option>'
+        }
+        ?>
 	      </select>
 
             </div>
