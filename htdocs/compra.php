@@ -109,7 +109,7 @@
 
         $statement = $conn->query("SELECT * FROM productos");
         while ($row = $statement->fetch()) {
-          echo '<option value="'.$row['nombre'].'">'.$row['nombre'].'</option>'
+          echo '<option value="'.$row['nombre'].'">'.$row['nombre'].'</option>';
         }
         ?>
 	      </select>
